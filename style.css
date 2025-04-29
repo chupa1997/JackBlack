@@ -1,0 +1,129 @@
+/* General Styles */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #0b0b0b;
+  color: #ffffff;
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3 {
+  text-align: center;
+  color: #ffd700;
+}
+
+a {
+  color: #ffd700;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Blackjack Table */
+.table {
+  background-color: #006400;
+  border-radius: 15px;
+  margin: 20px auto;
+  padding: 20px;
+  width: 90%;
+  max-width: 800px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.8);
+  position: relative;
+}
+
+.table::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+  height: 5px;
+  background-color: #ffd700;
+  border-radius: 2px;
+}
+
+/* Player and Dealer Areas */
+.player-area,
+.dealer-area {
+  display: flex;
+  justify-content: space-around;
+  margin: 20px 0;
+}
+
+.card {
+  width: 80px;
+  height: 120px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  font-weight: bold;
+  color: #000;
+}
+
+.card.hidden {
+  background-color: #333;
+  color: #333;
+}
+
+/* Card Images */
+.card-image {
+  width: 80px;
+  height: 120px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  margin: 5px;
+  object-fit: cover;
+}
+
+/* Spades Cards */
+.card.spades {
+  background-image: url('/path/to/spades.png'); /* Replace with the actual path to the spades card images */
+  background-size: cover;
+  background-position: center;
+  color: transparent; /* Hide text for spades cards */
+}
+
+/* Buttons */
+button {
+  background-color: #ffd700;
+  color: #000;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  margin: 10px;
+}
+
+button:hover {
+  background-color: #e6c200;
+}
+
+button:disabled {
+  background-color: #555;
+  cursor: not-allowed;
+}
+
+/* Score Display */
+.score {
+  text-align: center;
+  font-size: 24px;
+  margin: 10px 0;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  color: #555;
+  font-size: 14px;
+  margin-top: 20px;
+}
